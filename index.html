@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var _fetch = window.fetch;
+          var defineFetch = function(obj) {
+            try {
+              Object.defineProperty(obj, 'fetch', {
+                get: function() {
+                  return _fetch;
+                },
+                set: function(val) {
+                  _fetch = val;
+                },
+                configurable: true,
+                enumerable: true
+              });
+            } catch (e) {}
+          };
+          if (typeof window !== 'undefined') {
+            defineFetch(window);
+            if (window.Window && window.Window.prototype) {
+              defineFetch(window.Window.prototype);
+            }
+          }
+        } catch (_) {}
+      })();
+    </script>
+    <title>Prime Medical and Dental Care | Dr. Tariq Mehmood - Rawalpindi</title>
+    <meta name="description" content="Prime Medical and Dental Care in Rawalpindi led by Dr. Tariq Mehmood. Modern dental treatments, teeth whitening, orthodontics, oral surgery, and compassionate patient care." />
+    <meta property="og:title" content="Prime Medical and Dental Care | Dr. Tariq Mehmood" />
+    <meta property="og:description" content="Expert Dental & Medical Care in Rawalpindi. Mon to Sat: 6:00 PM – 9:30 PM at Sir Syed Chowk, Tipu Road." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#F8FAFC] text-[#0F2B5B] font-sans antialiased selection:bg-[#00A896]/20 selection:text-[#0F2B5B]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,6 @@
+{
+  "name": "Prime Medical and Dental Care",
+  "description": "Official website of Prime Medical and Dental Care led by Dr. Tariq Mehmood in Rawalpindi. Expert dental and medical care, appointment booking, and timings.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
