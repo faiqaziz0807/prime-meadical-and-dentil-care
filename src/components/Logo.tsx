@@ -15,21 +15,21 @@ export const Logo: React.FC<LogoProps> = ({
   className = '',
 }) => {
   const sizeClasses = {
-    sm: 'w-10 h-10',
-    md: 'w-12 h-12 md:w-14 md:h-14',
-    lg: 'w-16 h-16 md:w-20 md:h-20',
+    sm: 'w-8 h-8 sm:w-9 sm:h-9',
+    md: 'w-9 h-9 sm:w-11 sm:h-11 md:w-13 md:h-13',
+    lg: 'w-13 h-13 sm:w-16 sm:h-16 md:w-20 md:h-20',
   };
 
   const titleSizes = {
-    sm: 'text-base font-bold',
-    md: 'text-lg md:text-xl font-bold tracking-tight',
-    lg: 'text-xl md:text-2xl font-extrabold tracking-tight',
+    sm: 'text-xs sm:text-sm font-bold',
+    md: 'text-[13px] sm:text-base md:text-lg lg:text-xl font-bold tracking-tight',
+    lg: 'text-base sm:text-xl md:text-2xl font-extrabold tracking-tight',
   };
 
   const isLight = variant === 'light' || variant === 'footer';
 
   return (
-    <div className={`flex items-center gap-3 group ${className}`} id="clinic-brand-logo">
+    <div className={`flex items-center gap-2 sm:gap-3 group ${className}`} id="clinic-brand-logo">
       <div className={`relative ${sizeClasses[size]} shrink-0 rounded-full overflow-hidden shadow-md ring-2 ${
         isLight ? 'ring-[#00A896]/60 bg-white' : 'ring-[#0F2B5B]/20 bg-white'
       } transition-transform duration-300 group-hover:scale-105`}>
@@ -41,9 +41,9 @@ export const Logo: React.FC<LogoProps> = ({
         />
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col min-w-0">
         <span
-          className={`leading-tight font-display transition-colors ${
+          className={`leading-tight font-display transition-colors whitespace-nowrap overflow-hidden text-ellipsis ${
             isLight ? 'text-white' : 'text-[#0F2B5B]'
           } ${titleSizes[size]}`}
         >
@@ -51,12 +51,12 @@ export const Logo: React.FC<LogoProps> = ({
         </span>
         {showSubtitle && (
           <span
-            className={`text-xs font-medium tracking-wide flex items-center gap-1.5 ${
+            className={`text-[10px] sm:text-xs font-medium tracking-wide flex items-center gap-1.5 whitespace-nowrap truncate ${
               isLight ? 'text-slate-300' : 'text-slate-600'
             }`}
           >
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00A896]"></span>
-            Dr. Tariq Mehmood • Rawalpindi
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00A896] shrink-0"></span>
+            <span>Dr. Tariq Mehmood • Rawalpindi</span>
           </span>
         )}
       </div>

@@ -69,41 +69,39 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 font-sans">
-      {/* Top Bar for Clinic Details */}
+      {/* Top Bar for Clinic Details - Centered as requested */}
       <div className={`bg-[#0F2B5B] text-white text-xs py-2 px-4 border-b border-white/10 transition-all duration-300 ${
         isScrolled ? 'hidden md:block md:py-1.5 opacity-90' : 'block'
       }`}>
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-          <div className="flex items-center gap-6 flex-wrap">
-            <div className="flex items-center gap-1.5 text-slate-200">
-              <MapPin className="w-3.5 h-3.5 text-[#00A896] shrink-0" />
-              <span>Sir Syed Chowk, Tipu Road, Rawalpindi</span>
-            </div>
-            <div className="flex items-center gap-1.5 text-slate-200">
-              <Clock className="w-3.5 h-3.5 text-[#00A896] shrink-0" />
-              <span className="font-semibold text-emerald-300">Mon – Sat: 6:00 PM – 9:30 PM</span>
-              <span className="text-slate-400 text-[11px]">(Sun Closed)</span>
-            </div>
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-center">
+          <div className="flex items-center justify-center gap-1.5 text-slate-200">
+            <MapPin className="w-3.5 h-3.5 text-[#00A896] shrink-0" />
+            <span className="font-medium">Sir Syed Chowk, Tipu Road, Rawalpindi</span>
           </div>
 
-          <div className="flex items-center gap-4 ml-auto">
-            <a 
-              href={CLINIC_INFO.googleMapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#00A896] transition-colors flex items-center gap-1 text-[11px] bg-white/10 hover:bg-white/20 px-2 py-0.5 rounded"
-            >
-              <span>View Map</span>
-              <ChevronRight className="w-3 h-3" />
-            </a>
-            <a 
-              href={`tel:${CLINIC_INFO.phone}`}
-              className="flex items-center gap-1 text-slate-200 hover:text-white font-medium"
-            >
-              <Phone className="w-3 h-3 text-[#00A896]" />
-              <span>{CLINIC_INFO.phoneDisplay}</span>
-            </a>
+          <div className="flex items-center justify-center gap-1.5 text-slate-200">
+            <Clock className="w-3.5 h-3.5 text-[#00A896] shrink-0" />
+            <span className="font-semibold text-emerald-300">Mon – Sat: 6:00 PM – 9:30 PM</span>
+            <span className="text-slate-400 text-[11px]">(Sun Closed)</span>
           </div>
+
+          <a 
+            href={`tel:${CLINIC_INFO.phone}`}
+            className="flex items-center justify-center gap-1.5 text-slate-200 hover:text-white font-medium transition-colors"
+          >
+            <Phone className="w-3.5 h-3.5 text-[#00A896] shrink-0" />
+            <span>{CLINIC_INFO.phoneDisplay}</span>
+          </a>
+
+          <a 
+            href={CLINIC_INFO.googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white hover:bg-[#00A896] transition-all flex items-center justify-center gap-1 text-[11px] font-semibold bg-white/10 px-2.5 py-0.5 rounded-md"
+          >
+            <span>View Map</span>
+            <ChevronRight className="w-3 h-3" />
+          </a>
         </div>
       </div>
 

@@ -91,11 +91,11 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({
           {/* Left Column: Hero Text & CTAs */}
           <div className="lg:col-span-8 text-white space-y-6">
             {/* Top Pill Badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00A896] text-xs sm:text-sm font-semibold tracking-wider shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#00A896] animate-ping"></span>
-              <span className="text-teal font-bold uppercase tracking-widest text-xs">Premium Healthcare Solutions</span>
-              <span className="text-white/40">•</span>
-              <span className="text-white font-medium">Dr. Tariq Mehmood</span>
+            <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00A896] text-xs sm:text-sm font-semibold tracking-wider shadow-sm max-w-full overflow-hidden">
+              <span className="w-2 h-2 rounded-full bg-[#00A896] animate-ping shrink-0"></span>
+              <span className="text-teal-300 font-bold uppercase tracking-wider text-[11px] sm:text-xs whitespace-nowrap">Premium Healthcare</span>
+              <span className="text-white/40 shrink-0">•</span>
+              <span className="text-white font-medium whitespace-nowrap truncate">Dr. Tariq Mehmood</span>
             </div>
 
             {/* Main Headline */}

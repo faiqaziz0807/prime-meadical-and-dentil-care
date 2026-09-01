@@ -96,19 +96,19 @@ export const AboutDoctor: React.FC<AboutDoctorProps> = ({ onOpenBooking }) => {
                 Expertise in high-precision dental surgery and holistic patient care with over 15 years of clinical excellence.
               </p>
               
-              <div className="flex flex-wrap gap-2 mt-3 text-xs font-semibold">
-                <span className="bg-[#0F2B5B]/10 text-[#0F2B5B] px-3 py-1 rounded-full border border-[#0F2B5B]/15">BDS, RDS</span>
-                <span className="bg-[#00A896]/10 text-[#00A896] px-3 py-1 rounded-full border border-[#00A896]/20">Implantologist</span>
-                <span className="bg-[#00A896]/10 text-[#00A896] px-3 py-1 rounded-full border border-[#00A896]/20">Cosmetic Specialist</span>
-                <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200">PMDC Registered</span>
+              <div className="flex items-center gap-2 mt-3 text-xs font-semibold overflow-x-auto no-scrollbar py-1">
+                <span className="bg-[#0F2B5B]/10 text-[#0F2B5B] px-3 py-1 rounded-full border border-[#0F2B5B]/15 whitespace-nowrap shrink-0">BDS, RDS</span>
+                <span className="bg-[#00A896]/10 text-[#00A896] px-3 py-1 rounded-full border border-[#00A896]/20 whitespace-nowrap shrink-0">Implantologist</span>
+                <span className="bg-[#00A896]/10 text-[#00A896] px-3 py-1 rounded-full border border-[#00A896]/20 whitespace-nowrap shrink-0">Cosmetic Specialist</span>
+                <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200 whitespace-nowrap shrink-0">PMDC Registered</span>
               </div>
             </div>
 
-            {/* Interactive Tabs */}
-            <div className="flex border-b border-slate-200 gap-2">
+            {/* Interactive Tabs - Single Line Layout */}
+            <div className="flex border-b border-slate-200 gap-4 sm:gap-6 overflow-x-auto no-scrollbar">
               <button
                 onClick={() => setActiveTab('overview')}
-                className={`pb-2.5 text-xs sm:text-sm font-bold transition-all border-b-2 cursor-pointer ${
+                className={`pb-2.5 text-xs sm:text-sm font-bold transition-all border-b-2 whitespace-nowrap shrink-0 cursor-pointer ${
                   activeTab === 'overview'
                     ? 'border-[#00A896] text-[#00A896]'
                     : 'border-transparent text-slate-600 hover:text-[#0F2B5B]'
@@ -118,7 +118,7 @@ export const AboutDoctor: React.FC<AboutDoctorProps> = ({ onOpenBooking }) => {
               </button>
               <button
                 onClick={() => setActiveTab('hygiene')}
-                className={`pb-2.5 text-xs sm:text-sm font-bold transition-all border-b-2 cursor-pointer ${
+                className={`pb-2.5 text-xs sm:text-sm font-bold transition-all border-b-2 whitespace-nowrap shrink-0 cursor-pointer ${
                   activeTab === 'hygiene'
                     ? 'border-[#00A896] text-[#00A896]'
                     : 'border-transparent text-slate-600 hover:text-[#0F2B5B]'
@@ -128,7 +128,7 @@ export const AboutDoctor: React.FC<AboutDoctorProps> = ({ onOpenBooking }) => {
               </button>
               <button
                 onClick={() => setActiveTab('technology')}
-                className={`pb-2.5 text-xs sm:text-sm font-bold transition-all border-b-2 cursor-pointer ${
+                className={`pb-2.5 text-xs sm:text-sm font-bold transition-all border-b-2 whitespace-nowrap shrink-0 cursor-pointer ${
                   activeTab === 'technology'
                     ? 'border-[#00A896] text-[#00A896]'
                     : 'border-transparent text-slate-600 hover:text-[#0F2B5B]'
